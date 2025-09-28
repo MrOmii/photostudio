@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalasagar Photo Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+
+</head>
+<body>
+<nav id="navigation">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Our Services</a></li>
+    <li><a href="gallery.html">Our Shops</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="signin.html">Sign Up</a></li>
+  </ul>
+</nav>
+
+<section id="about">
+    <div class="container">
+      <h1 class="shop-title">✨ Kalasagar Photo Studio ✨</h1>
+      <p class="tagline">Capturing Moments • Creating Memories • Crafting Gifts</p>
+
+      <div class="about-wrapper">
+        
+       <div class="about-box">
+    <a href="photostudio.html">
+        <img src="img/kalasagarimage1.jpg" alt="Photo Studio">
+        <h3>Kalasagar Photo Studio</h3>
+    </a>
+    <p>
+        At <strong>Kalasagar Photo Studio (Since 1994)</strong>, we specialize in professional
+        photography — from portraits and family shoots to event coverage. 
+        Our modern studio and expert photographers ensure your memories are 
+        beautifully captured and preserved.
+    </p>
+</div>
+
+
+        <!-- Gift Shop -->
+        <div class="about-box">
+          <img src="img/giftshop.jpeg" alt="Gift Shop">
+          <h3>Our Gift Shop</h3>
+          <p>
+            Alongside our studio, we run a creative <strong>Gift Shop</strong> offering 
+            personalized photo frames, albums, and handcrafted keepsakes. Perfect for 
+            turning your favorite moments into timeless gifts.
+          </p>
+        </div>
+
+        <!-- Frame Wholesalers -->
+        <div class="about-box">
+          <img src="img/frameshop.jpeg" alt="Gift Shop">
+          <h3>Wholesale Frames Shop</h3>
+          <p>
+            Alongside our studio & Frames , we run a  <strong>RS Enterprise</strong> as our wholesale frames, mugs, mobile covers, acrelik frames and alot more .Which deals in the bulk quantities with the shop owners.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <section id="services">
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Professional photography & personalized gifts for every occasion</p>
+
+        <div class="services-wrapper">
+
+          <!-- Wedding Photography -->
+<div class="service-box" onclick="openGallery('wedding')">
+    <img src="img/wed 4.jpeg" alt="Wedding Photography">
+    <h3>Wedding Photography</h3>
+    <p>
+        Capture your special day with elegance and creativity. Our photographers ensure 
+        every moment, smile, and emotion is beautifully preserved.
+    </p>
+</div>
+
+            <!-- Event Coverage -->
+            <div class="service-box">
+                <img src="images/event-coverage.jpg" alt="Event Coverage">
+                <h3>Event Coverage</h3>
+                <p>
+                    From birthdays to corporate events, we provide professional photography 
+                    services to make your memories last a lifetime.
+                </p>
+            </div>
+
+            <!-- Studio Portraits -->
+            <div class="service-box">
+                <img src="images/studio-portrait.jpg" alt="Studio Portraits">
+                <h3>Studio Portraits</h3>
+                <p>
+                    Personalized studio sessions for individuals, families, and groups with 
+                    professional lighting and artistic direction.
+                </p>
+            </div>
+
+            <!-- Gift Customization -->
+            <div class="service-box">
+                <img src="images/custom-gifts.jpg" alt="Gift Customization">
+                <h3>Custom Gifts</h3>
+                <p>
+                    Turn your photos into timeless gifts — from frames and albums to mugs and 
+                    mobile covers, perfect for every occasion.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Modal -->
+<div id="galleryModal" class="gallery-modal">
+    <span class="close" onclick="closeGallery()">&times;</span>
+    <div class="gallery-content" id="galleryContent"></div>
+</div>
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">We’d love to hear from you! Reach out for bookings or inquiries.</p>
+
+        <div class="contact-wrapper">
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><strong>Address:</strong>Kalasagar Photo Studio Shirwal</p>
+                <p>Call us: <a href="tel:+918796977705">8796977705</a></p>
+                <p><strong>Email:</strong> kalasagarstudio@gmail.com</p>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <form id="contactForm">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+<footer id="footer">
+    <div class="container">
+        <p>© 2025 Kalasagar Photo Studio. All Rights Reserved.</p>
+        <p>Made by <strong>NSS</strong></p>
+    </div>
+</footer>
+
+
+
+<script src="app.js"></script>
+
+</body>
+</html>

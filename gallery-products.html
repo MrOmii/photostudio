@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery - Kalasagar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section id="product-gallery">
+    <div class="container">
+        <h1>Our Products</h1>
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="img/glass1.jpeg" alt="Photo Frame">
+                <h3>Glass Photo Frame</h3>
+                <p>₹499</p>
+                <button>View Details</button>
+            </div>
+            <div class="product-card">
+                <img src="img/lamination1.jpg" alt="Photo Frame">
+                <h3>Lamination Photo Frame</h3>
+                <p>₹499</p>
+                <button>View Details</button>
+            </div>
+            <div class="product-card">
+                <img src="img/Acrylic_Photo_Frame.webp" alt="Photo Frame">
+                <h3>Glass Photo Frame</h3>
+                <p>₹499</p>
+                <button>View Details</button>
+            </div>
+            <div class="product-card">
+                <img src="img/backlight1.jpg" alt="Photo Frame">
+                <h3>Glass Photo Frame</h3>
+                <p>₹499</p>
+                <button>View Details</button>
+            </div>
+
+           
+
+            <!-- Add more product cards as needed -->
+        </div>
+    </div>
+</section>
+
+    
+
+    <script>
+        // Example product images
+        const productImages = {
+            frames: ['images/frames1.jpg','images/frames2.jpg','images/frames3.jpg'],
+            albums: ['images/album1.jpg','images/album2.jpg','images/album3.jpg'],
+            gifts: ['images/gift1.jpg','images/gift2.jpg','images/gift3.jpg']
+        };
+
+        // Get type from query string
+        const params = new URLSearchParams(window.location.search);
+        const type = params.get('type');
+        const galleryTitle = document.getElementById('gallery-title');
+        const galleryWrapper = document.getElementById('galleryWrapper');
+
+        galleryTitle.textContent = type ? type.charAt(0).toUpperCase() + type.slice(1) + " Gallery" : "Product Gallery";
+
+        if(type && productImages[type]){
+            productImages[type].forEach(src => {
+                const img = document.createElement('img');
+                img.src = src;
+                img.style.width = "300px";
+                img.style.margin = "10px";
+                img.style.borderRadius = "10px";
+                galleryWrapper.appendChild(img);
+            });
+        } else {
+            galleryWrapper.innerHTML = "<p>No images available for this product.</p>";
+        }
+    </script>
+
+</body>
+</html>
